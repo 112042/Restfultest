@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '-2_s#-28*hb*d!byescs8fdci#c%22oqlhyx)-95^65%a@_@55'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -43,7 +43,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -81,24 +80,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-     #'default': {
-        #'ENGINE': 'django.db.backends.mysql',
-        #'NAME': 'awt',
-       # 'USER': 'isfws',
-       # 'PASSWORD': 'homework',
-      # 'HOST': '140.118.109.225',   # Or an IP Address that your database is hosted on
-     #   'PORT': '3306',
-        #optional:
-    #    'OPTIONS': {
-          #'threaded': True,
-         # 'autocommit': True,
-        #  'init_command': 'SET default_storage_engine=INNODB',
-                #'sql_mode=STRICT_TRANS_TABLES,'    # see note below
-                #'SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
-       # },
-      #  'TEST_CHARSET': 'utf8',
-     #   'TEST_COLLATION': 'utf8_general_ci',
-    #}
 }
 
 
